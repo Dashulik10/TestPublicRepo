@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public interface SessionRepository extends JpaRepository<Session, Long> {
+
     @Query(value = """
        SELECT id, device_type - 1 AS device_type, started_at_utc, ended_at_utc, user_id 
        FROM sessions

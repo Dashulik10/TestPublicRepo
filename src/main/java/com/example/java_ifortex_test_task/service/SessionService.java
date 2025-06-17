@@ -18,7 +18,7 @@ public class SessionService {
     private final SessionRepository sessionRepository;
     private final SessionMapper sessionMapper;
 
-
+    // Returns the first (earliest) desktop Session
     public SessionResponseDTO getFirstDesktopSession() {
         Session firstSession = sessionRepository.getFirstDesktopSession(DeviceType.DESKTOP);
 
